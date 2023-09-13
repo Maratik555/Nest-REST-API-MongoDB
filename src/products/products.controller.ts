@@ -9,7 +9,6 @@ import {
   Param,
   Post,
   Put,
-  // Redirect
 } from '@nestjs/common';
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
@@ -20,7 +19,6 @@ import { Product } from './schemas/product.schema';
 export class ProductsController {
   constructor(private readonly productsService: ProductsService) {}
   @Get()
-  // @Redirect('https://google.com', 301)
   getAll(): Promise<Product[]> {
     return this.productsService.getAll();
   }
